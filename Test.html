@@ -1,0 +1,64 @@
+This is GitHub  Test!!
+------------------------------------
+
+
+
+
+
+安装git  sudo apt-get install git git-core
+
+
+ssh -T git@github.com
+执行之后提示：Permission denied (publickey).
+验证是否连上github
+
+
+
+
+通过Ubuntu下的ssh-keygen命令创建公钥/私钥对：
+ssh-keygen -C "yourname@gmail.com" -f ~/.ssh/github
+
+
+
+然后将~/.ssh/github.pub公钥中的内容拷贝到github上到SSH-KEY
+
+
+
+
+ssh -T git@github.com
+执行后提示：Hi github! You've successfully authenticated, but GitHub does not provide shell access.
+
+
+
+---------------------
+
+
+
+使用SSH-KEY 验证时 要把.git/config中到url改成ssh地址
+
+url是 https的时候会采用用户名认证. 是ssh地址的时候才会采用ssh认证
+
+这样每次push就不用输入账号密码了……
+
+
+
+----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
